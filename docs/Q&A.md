@@ -40,7 +40,7 @@ rustflags = [
 # 该配置只能写一份, 否则 memory.x 会导致异常
 # [target.'cfg(all(target_arch = "arm", target_os = "none"))']
 # # TODO: replace `$CHIP` with your chip's name (see `probe-run --list-chips` output)
-# runner = "probe-run --chip STM32F103C8"
+# runner = "probe-run --chip STM32F103RC"
 # rustflags = [
 #     "-C",
 #     "linker=flip-link",
@@ -83,7 +83,7 @@ Caused by:
 # GDB
 # runner = 'arm-none-eabi-gdb'
 # 真机测试
-runner = "probe-run --chip STM32F103C8"  # <--- 取消注释
+runner = "probe-run --chip STM32F103RC"  # <--- 取消注释
 rustflags = [
     "-C",
     "linker=flip-link",
@@ -103,7 +103,7 @@ rustflags = [
 执行以下指令进行替换。
 
 ```shell
-cargo test --target thumbv7m-none-eabi -p testsuite probe-run -- --chip STM32F103C8
+cargo test --target thumbv7m-none-eabi -p testsuite probe-run -- --chip STM32F103RC
 ```
 
 ## cannot find linker script defmt.x
@@ -132,7 +132,7 @@ defmt 与 embed 的 crate 存在冲突，因此需要注释掉 defmt 的配置�
 # GDB
 # runner = 'arm-none-eabi-gdb'
 # 真机测试
-# runner = "probe-run --chip STM32F103C8"
+# runner = "probe-run --chip STM32F103RC"
 rustflags = [
     "-C",
     "linker=flip-link",

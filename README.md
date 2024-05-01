@@ -172,7 +172,7 @@
 - [官方嵌入式](https://www.rust-lang.org/zh-CN/what/embedded)
 - [stm32f1xx-hal](https://github.com/stm32-rs/stm32f1xx-hal)
 - [Rust 嵌入式精选列表](https://github.com/rust-embedded/awesome-embedded-rust)
-- [STM32F103c8 数据表](https://www.st.com/resource/en/datasheet/cd00161566.pdf)
+- [STM32F103RC 数据表](https://www.st.com/resource/en/datasheet/cd00161566.pdf)
 - [嵌入经济学](https://docs.rust-embedded.org/embedonomicon/)
 - [Linux 系统下使用 cutecom 进行串口通信（一）](https://zhuanlan.zhihu.com/p/371813518)
 - [Linux 下 minicom 串口助手的使用](https://www.cnblogs.com/xingboy/p/16538932.html)

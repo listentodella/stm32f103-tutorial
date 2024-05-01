@@ -11,7 +11,7 @@ protocol = "Swd"
 # speed = 1337
 
 [default.general]
-chip = "STM32F103C8"
+chip = "STM32F103RC"
 
 # [default.reset]
 # halt_afterwards = true

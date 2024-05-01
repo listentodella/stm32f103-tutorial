@@ -2,8 +2,8 @@
 
 ## 用户配置文件
 
-linux 中配置文件一般所在目录 `/usr/share/openocd/scripts`
-
+linux 中配置文件一般所在目录 `/usr/share/openocd/scripts`  
+mac   中配置文件一般所在目录 `/opt/homebrew/share/openocd/scripts/`
 三种主要类型的非用户配置文件:
 
 - interface: 接口配置文件;
@@ -11,9 +11,16 @@ linux 中配置文件一般所在目录 `/usr/share/openocd/scripts`
 - target: 集成 CPU 和其他 JTAG TAPS 的芯片
 
 适合当前开发板的配置文件：
-
-- board: /usr/share/openocd/scripts/board/stm32f103c8_blue_pill.cfg
+linux:
+```
+- board: /usr/share/openocd/scripts/board/STM32F103RC_blue_pill.cfg
 - target: /usr/share/openocd/scripts/target/stm32f1x.cfg
+```  
+mac:  
+```
+- board: /opt/homebrew/share/openocd/scripts/board/STM32F103RC_blue_pill.cfg
+- target: /opt/homebrew/share/openocd/scripts/target/stm32f1x.cfg
+```
 
 ## 配置
 
@@ -28,7 +35,7 @@ source [find interface/stlink.cfg]
 
 # 目标设备芯片类型和调试速率
 set TARGET_NAME "cortex_m"
-set CHIPNAME "stm32f103c8"
+set CHIPNAME "STM32F103RC"
 
 # clock speed 1000 kHz
 # adapter speed 1000

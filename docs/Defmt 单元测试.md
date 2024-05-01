@@ -30,7 +30,7 @@ cargo test --lib
 
 cargo test --target thumbv7m-none-eabi -p testsuite
 
-cargo test --target thumbv7m-none-eabi -p testsuite probe-run -- --chip STM32F103C8
+cargo test --target thumbv7m-none-eabi -p testsuite probe-run -- --chip STM32F103RC
 ```
 
 - 集成测试
@@ -47,7 +47,7 @@ cargo test --test integration
 
 ```shell
 # 完整指令
-cargo run --target thumbv7m-none-eabi -p testsuite_replace_embed probe-run -- --chip STM32F103C8 trace
+cargo run --target thumbv7m-none-eabi -p testsuite_replace_embed probe-run -- --chip STM32F103RC trace
 
 # 简写, 配置的有 `.cargo/config.toml` 文件
 cargo run -p testsuite_replace_embed

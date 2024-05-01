@@ -1,8 +1,8 @@
 [target.thumbv7m-none-eabi]
 # QEUM
 # runner = "qemu-system-arm -cpu cortex-m3 -machine lm3s6965evb -nographic -semihosting-config enable=on,target=native -kernel"
-# GDB
-# runner = 'arm-none-eabi-gdb'
+# GDB 配合 openocd, 需提前打开 `openocd -f openocd.cfg` 或者 直接 `openocd`也可以(前提是当前目录有cfg文件)
+runner = 'arm-none-eabi-gdb'
 rustflags = [
     "-C",
     "linker=flip-link",
@@ -12,6 +12,8 @@ rustflags = [
     # See https://github.com/rust-embedded/cortex-m-quickstart/pull/95
     "-C",
     "link-arg=--nmagic",
+    "-C",
+    "link-arg=-Tdefmt.x",
 ]
 
 
